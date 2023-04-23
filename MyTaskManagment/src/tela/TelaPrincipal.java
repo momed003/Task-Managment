@@ -65,7 +65,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jPanel1.add(jPanel2);
         jPanel2.setBounds(30, 20, 190, 480);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/bacgroundOff.PNG"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/bac2.PNG"))); // NOI18N
         jLabel1.setVerifyInputWhenFocusTarget(false);
         jPanel1.add(jLabel1);
         jLabel1.setBounds(0, 10, 840, 510);
