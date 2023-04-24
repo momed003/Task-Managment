@@ -164,7 +164,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/To Do_96px.png"))); // NOI18N
         jLabel7.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, null, java.awt.Color.lightGray, null, null));
         jPanel3.add(jLabel7);
-        jLabel7.setBounds(80, 270, 150, 120);
+        jLabel7.setBounds(70, 270, 150, 120);
 
         jPanel1.add(jPanel3);
         jPanel3.setBounds(230, 20, 590, 480);
