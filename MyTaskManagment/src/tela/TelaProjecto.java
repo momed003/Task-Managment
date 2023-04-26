@@ -27,72 +27,67 @@ public class TelaProjecto extends javax.swing.JInternalFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jPanel2 = new javax.swing.JPanel();
-        txtTitulo = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
-        jLabel2 = new javax.swing.JLabel();
+        jTable1 = new javax.swing.JTable();
+        txtTitulo = new javax.swing.JTextField();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        txtAreaDescricao = new javax.swing.JTextArea();
         jLabel1 = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
 
         setMaximumSize(new java.awt.Dimension(945, 623));
-        setMinimumSize(new java.awt.Dimension(945, 623));
+        setMinimumSize(new java.awt.Dimension(650, 550));
+        setName(""); // NOI18N
         setOpaque(true);
         setPreferredSize(new java.awt.Dimension(945, 623));
         getContentPane().setLayout(null);
 
-        jPanel1.setBackground(java.awt.SystemColor.controlDkShadow);
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setLayout(null);
 
-        jPanel2.setLayout(null);
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane1.setViewportView(jTable1);
 
-        txtTitulo.setBackground(new java.awt.Color(204, 204, 204));
-        txtTitulo.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
-        txtTitulo.setForeground(new java.awt.Color(255, 255, 255));
-        txtTitulo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        txtTitulo.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(java.awt.Color.white, java.awt.Color.lightGray), "Titulo", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Segoe UI Black", 1, 14), new java.awt.Color(255, 255, 255))); // NOI18N
-        jPanel2.add(txtTitulo);
-        txtTitulo.setBounds(20, 10, 210, 80);
+        jPanel1.add(jScrollPane1);
+        jScrollPane1.setBounds(2, 260, 640, 290);
 
-        jLabel3.setBackground(new java.awt.Color(204, 204, 204));
-        jLabel3.setFont(new java.awt.Font("Segoe UI Black", 0, 14)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel3.setText("descricao");
-        jPanel2.add(jLabel3);
-        jLabel3.setBounds(30, 110, 190, 30);
+        txtTitulo.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
+        txtTitulo.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Titulo", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Segoe UI Black", 2, 12))); // NOI18N
+        jPanel1.add(txtTitulo);
+        txtTitulo.setBounds(10, 80, 230, 40);
 
-        jTextField1.setBackground(new java.awt.Color(204, 204, 204));
-        jTextField1.setFont(new java.awt.Font("Segoe UI", 2, 14)); // NOI18N
-        jPanel2.add(jTextField1);
-        jTextField1.setBounds(50, 40, 150, 30);
+        txtAreaDescricao.setColumns(20);
+        txtAreaDescricao.setLineWrap(true);
+        txtAreaDescricao.setRows(5);
+        txtAreaDescricao.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Descricao", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Segoe UI Black", 3, 12))); // NOI18N
+        jScrollPane2.setViewportView(txtAreaDescricao);
 
-        jScrollPane1.setBackground(new java.awt.Color(204, 204, 204));
+        jPanel1.add(jScrollPane2);
+        jScrollPane2.setBounds(10, 140, 232, 105);
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jScrollPane1.setViewportView(jTextArea1);
-
-        jPanel2.add(jScrollPane1);
-        jScrollPane1.setBounds(10, 140, 234, 90);
-
-        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Capturep.PNG"))); // NOI18N
-        jLabel2.setBorder(javax.swing.BorderFactory.createEtchedBorder(null, new java.awt.Color(204, 204, 204)));
-        jPanel2.add(jLabel2);
-        jLabel2.setBounds(0, 0, 260, 530);
-
-        jPanel1.add(jPanel2);
-        jPanel2.setBounds(20, 40, 260, 530);
-
-        jLabel1.setBackground(new java.awt.Color(51, 51, 51));
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Capturep.PNG"))); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel1.setText("Data Inicial");
         jPanel1.add(jLabel1);
-        jLabel1.setBounds(10, 20, 920, 580);
+        jLabel1.setBounds(290, 90, 80, 20);
+
+        jPanel2.setBackground(new java.awt.Color(0, 102, 102));
+        jPanel2.setForeground(new java.awt.Color(255, 255, 255));
+        jPanel2.setToolTipText("Meus projectos");
+        jPanel1.add(jPanel2);
+        jPanel2.setBounds(0, 40, 640, 40);
 
         getContentPane().add(jPanel1);
-        jPanel1.setBounds(0, 2, 930, 580);
+        jPanel1.setBounds(0, -30, 640, 550);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -100,13 +95,12 @@ public class TelaProjecto extends javax.swing.JInternalFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextArea jTextArea1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JLabel txtTitulo;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JTable jTable1;
+    private javax.swing.JTextArea txtAreaDescricao;
+    private javax.swing.JTextField txtTitulo;
     // End of variables declaration//GEN-END:variables
 }
