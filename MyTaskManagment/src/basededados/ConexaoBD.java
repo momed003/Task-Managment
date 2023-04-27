@@ -4,10 +4,20 @@
  */
 package basededados;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
 /**
  *
- * @author LENOVO
+ * @author Marino Ricardo
  */
 public class ConexaoBD {
-    
+        public Connection getConnection(){
+        try{
+            return DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/task_management","root","");
+        }catch(SQLException error){
+             throw new RuntimeException(error);
+        }
+    }
 }
