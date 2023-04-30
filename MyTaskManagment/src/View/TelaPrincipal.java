@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package tela;
+package View;
 
 import java.awt.Color;
 
@@ -64,7 +64,6 @@ public class TelaPrincipal extends javax.swing.JFrame {
         setTitle("Painel Principal");
         setBackground(new java.awt.Color(255, 255, 255));
         setMinimumSize(null);
-        setPreferredSize(new java.awt.Dimension(852, 573));
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
