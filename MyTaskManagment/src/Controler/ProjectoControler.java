@@ -44,8 +44,6 @@ public class ProjectoControler {
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(null, "Erro ao salvar"+ex);
          //   Logger.getLogger(ProjectoControler.class.getName()).log(Level.SEVERE, null, ex);
-        }finally{
-            ConectionFactory.closeConection(com, ps);
         }
         
     }
