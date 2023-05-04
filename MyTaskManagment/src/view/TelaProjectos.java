@@ -3,19 +3,6 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package View;
-
-import Controler.ProjectoControler;import java.sql.SQLException;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.time.LocalDate;
-import java.time.ZoneId;
-import java.time.format.DateTimeFormatter;
-import java.time.temporal.ChronoUnit;
-import java.util.Date;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import model.Projectos;
-import model.Datas;
 /**
  *
  * @author momed003
