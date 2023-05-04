@@ -17,10 +17,10 @@ import javax.swing.JOptionPane;
  * @author LENOVO
  */
 public class LoginController {
-    private Connection con;
+    private final Connection con;
     
     public LoginController() {
-        this.con = new ConexaoJDBC().getConnection();
+        con = new ConexaoJDBC().getConnection();
     }
     
     
