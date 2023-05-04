@@ -4,6 +4,7 @@
  */
 package controller;
 
+import data.ConexaoJDBC;
 import jdbc.ConnectionFactory;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -19,7 +20,7 @@ public class LoginController {
     private Connection con;
     
     public LoginController() {
-        this.con = new ConnectionFactory().getConnection();
+        this.con = new ConexaoJDBC().getConnection();
     }
     
     

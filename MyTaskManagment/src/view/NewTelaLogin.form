@@ -65,8 +65,8 @@
               <Group type="102" alignment="1" attributes="0">
                   <EmptySpace min="0" pref="104" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="1" attributes="0">
-                      <Component id="jpassSenha" min="-2" pref="186" max="-2" attributes="0"/>
-                      <Component id="txtMail" min="-2" pref="180" max="-2" attributes="0"/>
+                      <Component id="txtSenha" min="-2" pref="186" max="-2" attributes="0"/>
+                      <Component id="txtEmail" min="-2" pref="180" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="102" max="-2" attributes="0"/>
               </Group>
@@ -91,11 +91,11 @@
                   <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
                   <Component id="jLabel3" pref="29" max="32767" attributes="0"/>
                   <EmptySpace min="-2" pref="64" max="-2" attributes="0"/>
-                  <Component id="txtMail" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtEmail" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Component id="lblSenha" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="jpassSenha" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtSenha" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
                   <Component id="lblEntar" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
@@ -207,7 +207,7 @@
             <Property name="text" type="java.lang.String" value="| Senha"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="txtMail">
+        <Component class="javax.swing.JTextField" name="txtEmail">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Serif" size="12" style="0"/>
@@ -226,7 +226,7 @@
             <Property name="text" type="java.lang.String" value=" |  E-mail"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JPasswordField" name="jpassSenha">
+        <Component class="javax.swing.JPasswordField" name="txtSenha">
         </Component>
         <Component class="javax.swing.JLabel" name="lblEntar">
           <Properties>

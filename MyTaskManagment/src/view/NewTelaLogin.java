@@ -4,6 +4,9 @@
  */
 package View;
 
+import controller.LoginController;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author user
@@ -32,9 +35,9 @@ public class NewTelaLogin extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         lblSenha = new javax.swing.JLabel();
-        txtMail = new javax.swing.JTextField();
+        txtEmail = new javax.swing.JTextField();
         lblMail = new javax.swing.JLabel();
-        jpassSenha = new javax.swing.JPasswordField();
+        txtSenha = new javax.swing.JPasswordField();
         lblEntar = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -96,7 +99,7 @@ public class NewTelaLogin extends javax.swing.JFrame {
         lblSenha.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Password_30px.png"))); // NOI18N
         lblSenha.setText("| Senha");
 
-        txtMail.setFont(new java.awt.Font("Serif", 0, 12)); // NOI18N
+        txtEmail.setFont(new java.awt.Font("Serif", 0, 12)); // NOI18N
 
         lblMail.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
         lblMail.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
@@ -130,8 +133,8 @@ public class NewTelaLogin extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addGap(0, 104, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jpassSenha, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtMail, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtSenha, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(102, 102, 102))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
@@ -150,11 +153,11 @@ public class NewTelaLogin extends javax.swing.JFrame {
                 .addGap(39, 39, 39)
                 .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, 29, Short.MAX_VALUE)
                 .addGap(64, 64, 64)
-                .addComponent(txtMail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txtEmail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(lblSenha)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jpassSenha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txtSenha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(28, 28, 28)
                 .addComponent(lblEntar)
                 .addGap(35, 35, 35))
@@ -186,6 +189,19 @@ public class NewTelaLogin extends javax.swing.JFrame {
 
     private void lblEntarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblEntarMouseClicked
         // TODO add your handling code here:
+//        JOptionPane.showMessageDialog(null, "clicked" );
+        
+        try {
+
+            String email = txtEmail.getText();
+            String senha = String.valueOf(txtSenha.getPassword());
+
+            LoginController dao = new LoginController();
+            dao.efetuarLogin(email, senha);
+            JOptionPane.showMessageDialog(null, "entrou" );
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "nao entrou" + e );
+        }
     }//GEN-LAST:event_lblEntarMouseClicked
 
     /**
@@ -228,11 +244,11 @@ public class NewTelaLogin extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JPasswordField jpassSenha;
     private javax.swing.JLabel lblEntar;
     private javax.swing.JLabel lblMail;
     private javax.swing.JLabel lblSair;
     private javax.swing.JLabel lblSenha;
-    private javax.swing.JTextField txtMail;
+    private javax.swing.JTextField txtEmail;
+    private javax.swing.JPasswordField txtSenha;
     // End of variables declaration//GEN-END:variables
 }
