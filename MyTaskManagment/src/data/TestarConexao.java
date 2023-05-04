@@ -16,7 +16,7 @@ import javax.swing.JOptionPane;
 public class TestarConexao {
     public  static void main(String[] args){
         try {
-            new ConexaoJDBC().getConneection();
+            new ConexaoJDBC().getConnection();
             JOptionPane.showMessageDialog(null, "conexao bem sucedida" );
         } catch (HeadlessException e) {
             JOptionPane.showMessageDialog(null, "Ops conexão não realiada" + e);
