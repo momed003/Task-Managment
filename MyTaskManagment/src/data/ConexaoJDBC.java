@@ -3,9 +3,6 @@ package data;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-
 public class ConexaoJDBC {
     public static String status="404-not found";
 
