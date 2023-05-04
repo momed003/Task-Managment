@@ -2,6 +2,9 @@
 package Controler;
 
 import data.ConectionFactory;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
@@ -16,36 +19,47 @@ import model.Projectos;
  * @author momed003
  * 
  */
+/**
+ *  private int id;
+    private String titulo;
+    private String descricao;
+    private String data_entrega;
+    private String estado;
+    private int user_id;
+    private String created_at;
+    private String tempo_estimado;
+    private String tempo_gasto;
+ * @author user
+ */
 public class ProjectoControler {
     
-    public void creat(Projectos p) throws SQLException{
-        //abrindo a conexao
-        Connection com=ConectionFactory.getConnection();
-        //preparando a conexao
-        PreparedStatement ps=null;//serve para preparar e executar a classe
-        
+    Projectos p=new Projectos();
+    
+    public String cria(){
         try {
-            ps=com.prepareStatement("INSERT INTO projects (id,titulo,descricao,data_entrega,estado,user_id,created_at,tempo_estimado,tempo_gasto,)"
-            +"VALUES (?,?,?,?,?,?,?,?,?)");
-        ps.setInt(0, p.getId());
-        ps.setString(1, p.getTitulo());
-        ps.setString(2, p.getDescricao());
-        ps.setString(3, p.getData_entrega());
-        ps.setString(4, p.getEstado());
-        ps.setInt(5,p.getUser_id());
-        ps.setString(6, p.getCreated_at());
-        ps.setString(7, p.getTempo_estimado());
-        ps.setString(8, p.getTempo_gasto());
-        
-            JOptionPane.showMessageDialog(null, "Salvo com sucesso!");
+            FileWriter fw=new FileWriter("PrpjectoController");
+            PrintWriter pw=new PrintWriter(fw);//escreve e pula uma linha no documento
             
-        ps.executeUpdate();
             
-        } catch (SQLException ex) {
-            JOptionPane.showMessageDialog(null, "Erro ao salvar"+ex);
-         //   Logger.getLogger(ProjectoControler.class.getName()).log(Level.SEVERE, null, ex);
+                pw.println("id:" +p.getId());
+                pw.println("titulo: "+p.getTitulo());
+                pw.println("Descricao: "+p.getDescricao());
+                pw.println("Data de entrega: "+p.getData_entrega());
+                pw.println("Estado: "+p.getEstado());
+                pw.println("User id: "+p.getUser_id());
+                pw.println("data de criacao: "+p.getCreated_at());
+                pw.println("Tempo estimado: "+p.getTempo_estimado());
+                pw.println("tempo gasto: "+p.getTempo_gasto());
+            pw.flush();//mandando os dados para o arquivo txt
+            pw.close();//fechando a conexao
+            fw.close();
+            
+            
+        } catch (IOException ex) {
+            Logger.getLogger(ProjectoControler.class.getName()).log(Level.SEVERE, null, ex);
         }
         
+        return null;
     }
     
 }
