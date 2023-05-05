@@ -241,7 +241,7 @@ public class TelaProjectos extends javax.swing.JFrame {
     }//GEN-LAST:event_txtDataEntregaActionPerformed
 
     private void btnCriarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCriarActionPerformed
-
+       
     }//GEN-LAST:event_btnCriarActionPerformed
 
     /**

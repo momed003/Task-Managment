@@ -107,6 +107,11 @@ public class NewTelaLogin extends javax.swing.JFrame {
         lblEntar.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         lblEntar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Checkmark_30px.png"))); // NOI18N
         lblEntar.setText("| Entrar");
+        lblEntar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblEntarMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -178,6 +183,12 @@ public class NewTelaLogin extends javax.swing.JFrame {
     private void lblSairMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblSairMouseClicked
         System.exit(0);
     }//GEN-LAST:event_lblSairMouseClicked
+
+    private void lblEntarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblEntarMouseClicked
+       TelaFinallyUser tp=new TelaFinallyUser();
+       this.setVisible(false);
+       tp.setVisible(true);
+    }//GEN-LAST:event_lblEntarMouseClicked
 
     /**
      * @param args the command line arguments
