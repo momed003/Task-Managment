@@ -62,7 +62,7 @@
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="jComboEstado" min="-2" pref="174" max="-2" attributes="0"/>
+                                  <Component id="jComboEstado" min="-2" pref="185" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <EmptySpace max="32767" attributes="0"/>
@@ -76,8 +76,8 @@
               <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="214" max="-2" attributes="0"/>
-                      <Component id="jComboUser" min="-2" pref="166" max="-2" attributes="0"/>
-                      <EmptySpace pref="364" max="32767" attributes="0"/>
+                      <Component id="jComboGestor" min="-2" pref="179" max="-2" attributes="0"/>
+                      <EmptySpace pref="351" max="32767" attributes="0"/>
                   </Group>
               </Group>
           </Group>
@@ -113,7 +113,7 @@
               <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="128" max="-2" attributes="0"/>
-                      <Component id="jComboUser" min="-2" max="-2" attributes="0"/>
+                      <Component id="jComboGestor" min="-2" max="-2" attributes="0"/>
                       <EmptySpace pref="427" max="32767" attributes="0"/>
                   </Group>
               </Group>
@@ -231,6 +231,9 @@
         </Container>
         <Component class="javax.swing.JComboBox" name="jComboEstado">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI" size="10" style="0"/>
+            </Property>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
               <StringArray count="3">
                 <StringItem index="0" value="Aberto"/>
@@ -248,8 +251,11 @@
             <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
           </AuxValues>
         </Component>
-        <Component class="javax.swing.JComboBox" name="jComboUser">
+        <Component class="javax.swing.JComboBox" name="jComboGestor">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI" size="10" style="0"/>
+            </Property>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
               <StringArray count="4">
                 <StringItem index="0" value="Item 1"/>

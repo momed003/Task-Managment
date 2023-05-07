@@ -33,7 +33,7 @@ public class TelaProjectos extends javax.swing.JFrame {
         jScrollPane2 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
         jComboEstado = new javax.swing.JComboBox<>();
-        jComboUser = new javax.swing.JComboBox<>();
+        jComboGestor = new javax.swing.JComboBox<>();
         btnCriar = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         txtTempoGato = new javax.swing.JFormattedTextField();
@@ -105,11 +105,13 @@ public class TelaProjectos extends javax.swing.JFrame {
         });
         jScrollPane2.setViewportView(jTable1);
 
+        jComboEstado.setFont(new java.awt.Font("Segoe UI", 0, 10)); // NOI18N
         jComboEstado.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Aberto", "Fechado", "Por Iniciar" }));
         jComboEstado.setBorder(javax.swing.BorderFactory.createTitledBorder("Estado"));
 
-        jComboUser.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jComboUser.setBorder(javax.swing.BorderFactory.createTitledBorder("Gestor"));
+        jComboGestor.setFont(new java.awt.Font("Segoe UI", 0, 10)); // NOI18N
+        jComboGestor.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboGestor.setBorder(javax.swing.BorderFactory.createTitledBorder("Gestor"));
 
         btnCriar.setBackground(new java.awt.Color(0, 102, 102));
         btnCriar.setFont(new java.awt.Font("Segoe UI Black", 2, 12)); // NOI18N
@@ -178,7 +180,7 @@ public class TelaProjectos extends javax.swing.JFrame {
                                 .addComponent(btnCriar, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGap(18, 18, 18)
-                                .addComponent(jComboEstado, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(jComboEstado, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(txtTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, 696, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -187,8 +189,8 @@ public class TelaProjectos extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel1Layout.createSequentialGroup()
                     .addGap(214, 214, 214)
-                    .addComponent(jComboUser, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(364, Short.MAX_VALUE)))
+                    .addComponent(jComboGestor, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(351, Short.MAX_VALUE)))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -216,7 +218,7 @@ public class TelaProjectos extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel1Layout.createSequentialGroup()
                     .addGap(128, 128, 128)
-                    .addComponent(jComboUser, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jComboGestor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addContainerGap(427, Short.MAX_VALUE)))
         );
 
@@ -281,7 +283,7 @@ public class TelaProjectos extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnCriar;
     private javax.swing.JComboBox<String> jComboEstado;
-    private javax.swing.JComboBox<String> jComboUser;
+    private javax.swing.JComboBox<String> jComboGestor;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;

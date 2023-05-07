@@ -3,12 +3,15 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package tela;
+import com.mysql.jdbc.Connection;
+import controller.LoginController;
 
 /**
  *
  * @author user
  */
 public class NewTelaLogin extends javax.swing.JFrame {
+    private Connection com;
 
     /**
      * Creates new form NewTelaLogin
@@ -16,7 +19,8 @@ public class NewTelaLogin extends javax.swing.JFrame {
     public NewTelaLogin() {
         initComponents();
     }
-
+            TelaFinallyUser tf=new TelaFinallyUser();
+           
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -107,6 +111,11 @@ public class NewTelaLogin extends javax.swing.JFrame {
         lblEntar.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         lblEntar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Checkmark_30px.png"))); // NOI18N
         lblEntar.setText("| Entrar");
+        lblEntar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblEntarMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -178,6 +187,19 @@ public class NewTelaLogin extends javax.swing.JFrame {
     private void lblSairMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblSairMouseClicked
         System.exit(0);
     }//GEN-LAST:event_lblSairMouseClicked
+
+    private void lblEntarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblEntarMouseClicked
+        try {
+            String mail=txtMail.getText();
+            String pass=String.valueOf(jpassSenha.getPassword());
+           LoginController logger=new  LoginController();
+           logger.efetuarLogin(mail, pass);
+           this.setVisible(false);
+           tf.setVisible(true);
+  
+        } catch (Exception e) {
+        }
+    }//GEN-LAST:event_lblEntarMouseClicked
 
     /**
      * @param args the command line arguments
