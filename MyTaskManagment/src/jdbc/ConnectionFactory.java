@@ -15,7 +15,8 @@ import java.sql.SQLException;
 public class ConnectionFactory {
     public Connection getConnection(){
         try{
-            return DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/task_management","root","");
+            return DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/my_taskmanagment","root","");
+         
         }catch(SQLException error){
              throw new RuntimeException(error);
         }

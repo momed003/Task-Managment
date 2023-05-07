@@ -17,7 +17,7 @@ public class TestaConexao {
             new ConnectionFactory().getConnection();
             JOptionPane.showMessageDialog(null, "Conectado com sucesso!");
         } catch (HeadlessException e) {
-            JOptionPane.showMessageDialog(null, "Ops conexão não realiada" + e);
+            JOptionPane.showMessageDialog(null, "Falha na conexao: " + e);
             
         }
     }  
