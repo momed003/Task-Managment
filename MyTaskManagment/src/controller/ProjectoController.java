@@ -37,6 +37,8 @@ public class ProjectoController {
                JOptionPane.showMessageDialog(null, "Utilizador nao existe na base de dados" );
             }else{
                 // user existe => criar o projecto
+               stmtExist.setInt(0, projecto.getId());
+               stmtExist.setString(1, projecto.getTitulo());
             }
             } catch(Exception e){
                 JOptionPane.showMessageDialog(null, "erro" );
